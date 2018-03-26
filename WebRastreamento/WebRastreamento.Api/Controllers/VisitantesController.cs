@@ -10,7 +10,7 @@ using WebRastreamento.Infra.DataContext;
 
 namespace WebRastreamento.Api.Controllers
 {
-    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:3000,http://localhost:3001", headers: "*", methods: "*")]
     //[EnableCors(origins: "http://192.168.0.14", headers: "*", methods: "*")]
     public class VisitantesController : ApiController
     {

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRastreamento.Infra", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRastreamento.Api", "WebRastreamento.Api\WebRastreamento.Api.csproj", "{3B7719D4-D68A-4507-8E6F-F7E927781C48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRastreamento.Api.Tests", "WebRastreamento.Api.Tests\WebRastreamento.Api.Tests.csproj", "{DBE6148C-E043-488C-8353-0735F5244F8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3B7719D4-D68A-4507-8E6F-F7E927781C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B7719D4-D68A-4507-8E6F-F7E927781C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B7719D4-D68A-4507-8E6F-F7E927781C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE6148C-E043-488C-8353-0735F5244F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE6148C-E043-488C-8353-0735F5244F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE6148C-E043-488C-8353-0735F5244F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE6148C-E043-488C-8353-0735F5244F8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

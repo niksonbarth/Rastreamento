@@ -11,7 +11,7 @@ using WebRastreamento.Infra.DataContext;
 
 namespace WebRastreamento.Api.Controllers
 {
-    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:3000,http://localhost:3001", headers: "*", methods: "*")]
     //[EnableCors(origins: "http://192.168.0.14", headers: "*", methods: "*")]
     public class AcessosController : ApiController
     {
@@ -25,17 +25,11 @@ namespace WebRastreamento.Api.Controllers
         }
 
         // GET: api/Acessos/5
-        [Route("Acessos/{id}")]
+        [Route("Acessos/{email}")]
         [ResponseType(typeof(Acesso))]
-        public IHttpActionResult GetAcesso(int id)
+        public IQueryable<Acesso> GetAcessoes(string email)
         {
-            Acesso acesso = db.Acessoes.Find(id);
-            if (acesso == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(acesso);
+            return db.Acessoes.Where(x => x.VisitanteEmail.Replace(".com",string.Empty).Replace(".com.br",string.Empty) == email);
         }
 
         // POST: api/Acessos

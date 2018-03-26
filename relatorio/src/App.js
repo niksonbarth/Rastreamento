@@ -30,7 +30,7 @@ class App extends Component {
         { !!this.state.errorMessage && <label>{ this.state.errorMessage }</label>}
         <ul>
           { this.state.visitantes.map((visitante) =>{
-            return <Pages id={visitante.id} text={visitante.email} />
+            return <Pages id={visitante.email} text={visitante.email} />
           })}
         </ul>
       </div>

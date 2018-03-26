@@ -9,7 +9,7 @@ export default class Pages extends Component{
     
       componentDidMount(){
           try{
-            const response = axios.get('http://localhost:55203/Acessos/' + this.props.id)
+            const response = axios.get('http://localhost:55203/Acessos/' + String(this.props.id).replace(".com","").replace(".com.br",""))
             .then(res => {
                 this.setState({ acessos: res.data})
             });
