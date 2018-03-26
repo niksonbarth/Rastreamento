@@ -54,7 +54,7 @@ namespace WebRastreamento.Api.Controllers
                 var result = acesso;
                 return Request.CreateResponse(HttpStatusCode.OK, result);
             }
-            catch(System.Exception e)
+            catch
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "Falha ao incluir acesso");
             }
