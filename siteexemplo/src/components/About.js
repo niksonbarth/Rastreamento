@@ -4,8 +4,8 @@ import Traker from './Tracker'
 export default class About extends React.Component {
     render() {
       return (
-        <div>
-         About
+        <div class="container" style={{ paddingTop: '50px'}}>
+        <h1 class="my-4">About</h1>
          <Traker />
         </div>
       );

@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     //window.onload = this.buscar
     return (
-      <div className="App">
+      <div class="panel-body">
         <header className="App-header">
           <h1 className="App-title">Relatório de acesso</h1>
         </header>

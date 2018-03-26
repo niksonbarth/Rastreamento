@@ -45,15 +45,16 @@ export default class Contact extends Component {
 
     render() {
       return (
-        <div>
-            <h2>Contato</h2>
+        <div class="container" style={{ paddingTop: '50px'}}>
+            <h1 class="my-4">Contato</h1>
+            { !!this.state.resultMessage && <div class="alert alert-info">{ this.state.resultMessage }</div>}
             <form onSubmit={this.Enviar}>
-                <input onChange={this.handleTextChange}/>
-                <button type="submit">Enviar</button> 
+                <input class="form-control" placeholder="E-mail" onChange={this.handleTextChange}/>
+                <br/>
+                <button type="submit" class="btn btn-default">Enviar</button> 
             </form>
-            { !!this.state.resultMessage && <label>{ this.state.resultMessage }</label>}
             <Traker />
-            </div>
+        </div>
       );
     }
   }

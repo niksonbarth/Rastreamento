@@ -5,9 +5,9 @@ export default class Home extends React.Component {
 
     render() {
       return (
-        <div>
-            Home
-            <Traker />
+        <div class="container" style={{ paddingTop: '50px'}}>
+          <h1 class="my-4">Home</h1>
+          <Traker />
         </div>
       );
     }
