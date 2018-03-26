@@ -11,8 +11,8 @@ using WebRastreamento.Infra.DataContext;
 
 namespace WebRastreamento.Api.Controllers
 {
-    //[EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
-    [EnableCors(origins: "http://192.168.0.14", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    //[EnableCors(origins: "http://192.168.0.14", headers: "*", methods: "*")]
     public class AcessosController : ApiController
     {
         private WebRastreamentoDataContext db = new WebRastreamentoDataContext();
@@ -43,8 +43,14 @@ namespace WebRastreamento.Api.Controllers
         [ResponseType(typeof(Acesso))]
         public HttpResponseMessage PostAcesso(Acesso acesso)
         {
-            if(acesso == null)
+            if(acesso == null || string.IsNullOrEmpty(acesso.Pagina))
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
+
+            var url = acesso.Pagina.Replace("/", string.Empty);
+            if (string.IsNullOrEmpty(url))
+                url = "Home";
+
+            acesso.Pagina = url;
 
             try
             {
@@ -54,7 +60,7 @@ namespace WebRastreamento.Api.Controllers
                 var result = acesso;
                 return Request.CreateResponse(HttpStatusCode.OK, result);
             }
-            catch
+            catch(System.Exception e)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "Falha ao incluir acesso");
             }

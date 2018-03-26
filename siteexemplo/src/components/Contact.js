@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Traker from './Tracker'
 
 const data = (email) => {
   this.email = email;
@@ -51,6 +52,7 @@ export default class Contact extends Component {
                 <button type="submit">Enviar</button> 
             </form>
             { !!this.state.resultMessage && <label>{ this.state.resultMessage }</label>}
+            <Traker />
             </div>
       );
     }

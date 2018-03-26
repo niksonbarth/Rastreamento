@@ -1,4 +1,5 @@
 import React from 'react';
+import Traker from './Tracker'
 
 export default class Home extends React.Component {
 
@@ -6,6 +7,7 @@ export default class Home extends React.Component {
       return (
         <div>
             Home
+            <Traker />
         </div>
       );
     }
