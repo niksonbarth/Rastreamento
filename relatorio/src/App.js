@@ -11,7 +11,7 @@ class App extends Component {
 
   componentDidMount(){
       try{
-        const response = axios.get('http://localhost:55203/Visitantes')
+        const response = axios.get('https://webrastreamentoapi.azurewebsites.net/Visitantes')
         .then(res => {
             this.setState({ visitantes: res.data})
         });
